@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+<script>
+        function updateTime() {
+            const optionsTime = { timeZone: "Asia/Manila", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: true };
+            const optionsDate = { timeZone: "Asia/Manila", weekday: "long", year: "numeric", month: "long", day: "numeric" };
+            
+            const time = new Date().toLocaleTimeString("en-US", optionsTime);
+            const date = new Date().toLocaleDateString("en-US", optionsDate);
+            
+            document.getElementById("time").innerText = time;
+            document.getElementById("date").innerText = date;
+        }
+        setInterval(updateTime, 1000);
+
+</script>
+<script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    function filterFunction() {
+      const div = document.getElementById("myDropdown");
+      const a = div.getElementsByTagName("a");
+      for (let i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          a[i].style.display = "";
+        } else {
+          a[i].style.display = "none";
+        }
+      }
+    }
+</script>
+<style>
+    .TimeYes{
+          position: relative;
+          text-align: right;
+          color: burlywood;
+          top: -30px;
+          font-style: Times;
+          margin-right: 10px;
+        }
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #58b05a;
+            background-image: linear-gradient(315deg, #f2cf43 0%, #19a186 74%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+    .header {
+            background: rgba(0, 0, 0, 0.7);
+            
+            text-align: center;
+            color: #fff;
+            position: absolute;
+            width:100%;
+            margin-left:-8px;
+            margin-top:-8px;
+            height: 120px;
+    }
+    .btn.LogOut {
+            margin: 10px;
+            padding: 12px 24px;
+            font-size: 1em;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            text-decoration: none;
+            background: #a3342c;
+            position: relative;
+            left: 0px;
+            top: 20px;
+    }
+    .image {
+            display: block;
+            width: 850px;
+            height: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 15px;
+    }
+    .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 24px;
+            font-size: 1em;
+            font-style: oblique;
+            color: whitesmoke;
+            background:rgb(28, 98, 39);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            text-decoration: none;
+            height: fit-content;
+            width: fit-content;
+            font-weight: 500;
+        }
+        .btn.secondary {
+            background:rgb(28, 98, 39);
+        }
+        .btn.Fourth {
+            background:rgb(28, 98, 39);
+        }
+        .btn.Three {
+            background:rgb(28, 98, 39);
+        }
+        .btn:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+        .leftcolumn {   
+        
+        float: left;
+        width: 73%;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .DesignContainers{
+            background-color:rgb(184, 212, 184);
+            background-image: linear-gradient(315deg, #ffffff7b 0%, #ffffff40 40%);
+            text-align: left; height: 50%; border:2px solid #58b05a;
+            border-radius: 0px;
+            width: 70%;
+            padding-left: 1%;
+            
+        }
+        .imageLogo{
+            align-items: center;
+            height: 200px;
+            width: 200px;
+            padding-left: 43.5%;
+            margin-top: -45PX;
+        }
+        .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+
+        .rightcolumn {
+        
+        float: right;
+        width: 25%;
+        text-align: justified;
+        font-size: 14px;
+        }
+        .card {
+        background-color: white;
+        padding: 20px;
+        margin-top: 20px;
+        height: fit-content;
+        }
+        .row::after {
+        display: table;
+        clear: both;
+        
+        }
+        .content {
+            text-align: center;
+            padding: 25px;
+            background: #1e1e1e;
+            color: #fff;
+            
+            border-top-left-radius: 70px;
+            border-top-right-radius: 70px;
+            margin-bottom:-8px;
+            margin-left:-8px;
+            margin-right:-8px;
+        }
+        
+</style>
+</head>
+<body>
+    <div class="header">
+        
+        <p class="TimeYes" id ="time" style="margin-top: 63px;"></p>
+        <p class="TimeYes" id ="date"></p>
+    </div>
+    <a href="index.php" class="btn LogOut"> Log-out </a>
+    <h1 style="margin-top: -65px; position: relative; text-align: center;padding-top: 30px; font-weight: 800; color: #f6f6f6;">  DENR - Prototype Docu System</h1>
+
+    <br><br><br><br><br>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Logo_of_the_Department_of_Environment_and_Natural_Resources.svg" class="imageLogo"></img>
+    <h1 style="text-align: center; color:floralwhite;">DENR - Prototype Docu System</h1>
+    <p style="text-align: center; color:floralwhite;">Website built for your database needs.</p>
+
+    <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+        
+            <h1>PAMB Clearance</h1>
+            <h5>Pamb about</h5>
+            <div class="fakeimg" style="height:10px;">Image</div>
+            <p>Some text..</p>
+      <div>
+        <a href="pamb.php" class="btn">PAMB</a>
+        <a href="PAMBIDATA.php" class="btn secondary">DATABASE</a>
+      </div>
+
+    </div>
+          <div class="card">
+            <h2>NIPAS Certification</h2>
+            <h5>about Nipas</h5>
+            <div class="fakeimg" style="height:10px;">Image</div>
+            <p>Some text..</p>
+        <div>
+            <a href="nipas.php" class="btn Three">NIPAS</a>
+            <a href="updatenipas.php" class="btn Fourth">DATABASE</a>
+        </div>
+    </div>
+
+      </div>
+        <div class="rightcolumn">
+          <div class="card">
+            <h2>About Me</h2>
+            <div class="pic" style="height:10px;"></div>
+            <p>The website offers DENR CDD employees a better and automated  way of creating ,managing, and documenting NIPAS certificate and PAMB clearance</p>
+            
+          </div>
+          <div class="card">
+            <h3>DENR Mission</h3>
+            <p>To mobilize our citizenry in protecting, conserving, and managing the environment and natural resources for the present and future generations. </p>
+            <h3>DENR Vision</h3>
+            <p>A nation enjoying and sustaining its natural resources and a clean and healthy environment.</p>
+          </div>
+          
+        </div>
+    </div>
+
+    <div class="content" style="margin-top: 43%; width: auto; padding-bottom: 15px;">
+        <h2>To learn more about DENR and other related topics</h2>
+        <p>Go visit: <a href="https://calabarzon.emb.gov.ph/online-services/?appgw_azwaf_jsc=f2JKgLpU9asbPh6V8cjemUHRw0svkdd2yid0w7K4Roo" style="color: white;"> DENR online services </a></p>
+    </div>
+
+    
+    
+</body>
+</html>
+
+
